@@ -1,0 +1,9 @@
+Category | Definition
+Test issue | Test failed due to incorrect testcase logic. Product code is valid but the testcase logic is no longer valid.
+Bug | Product bug introduced through a code change. Test exists and detected error as expected.
+Unknown | Test fails with unclear reason yet, maybe test flaky, maybe test env issue (Jenkins, other services, etc.).
+Datadog filter update required | Use this one in DD errors check, when new error can be safely ignored.
+PR | A code change has been made that invalidated the Test and the test needs to be updated.
+Jenkins issue | CI build environment issue, including webapp artifact issues.
+Bad go-svc version | Test fails with broken go-svc version, when this happens, the same test should fail across all DNS; only pass again when go-svc is fixed and redeployed.
+Human Error | Human error interrupting the test execution.

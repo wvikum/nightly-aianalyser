@@ -1,0 +1,42 @@
+current issues/problems that breaks tests but not a blocker to deployment tho.
+any flaky tests so we can improve in the future.
+
+Test Name,Error,Reason,Ongoing?,Additional Notes
+test-e2e: CSV Bulk (report),"Stuck on “Submit running on …”|“Response returned an error code”|“A job with operation … has been initiated from an action, but no listener has been configured to respond to it”","Flatfile test env issues, doesn’t seem to be happening in prod",Yes,
+test-e2e: CSV Bulk - enterprise (report),"Stuck on “Submit running on …”|“Response returned an error code”|“A job with operation … has been initiated from an action, but no listener has been configured to respond to it”","Flatfile test env issues, doesn’t seem to be happening in prod",Yes,
+test-e2e: CSV Bulk,Timing out|“Failed to process import”,"General flakiness, unsure, we need more info",Yes,"Record when failures happen, which import, trace ID if you have it, https://deputy.atlassian.net/browse/PRF-284"
+test-e2e: CSV Bulk - enterprise,Timing out|“Failed to process import”,"General flakiness, unsure, we need more info",Yes,"Record when failures happen, which import, trace ID if you have it, https://deputy.atlassian.net/browse/PRF-284"
+ATT Suite,"ERROR: Duplicate entry '1699189200-1699793999-1-1' for key 'deputec_company_period.start'|ERROR: Duplicate entry 'Gamingfy_ApproveTimesheet' for key 'deputec_hash_table.key'",Race condition with ATT,Yes,
+test-e2e: Timesheets v2 Lifeways smoke: Absent & Late,"Expected string: ""area 2, location 0: 1732204181033""|Received string: ""area 0, location 0: 1732204181033""",Known issue, tests being updated to work around,Yes,
+Zen E2E tests: Business Insights (Others) Pack (report),"locationHourByDay.spec.js:58 intermittent error when saving location settings",Could be related to new router changes,Yes,"https://deputy.atlassian.net/browse/QP-1183"
+
+
+Archive
+Issues that shouldn’t be happening anymore
+Test Name,Error,Reason,Additional Notes
+Zen E2E tests: Enterprise,"expected 'Other Default\nEdit\nEmployment type…' to include 'Weekly Weekday $20'","Fix PR","https://deputy.atlassian.net/browse/PRE-4263"
+test-e2e: Schedule Pack Vue3 Pack 1,"no confirmation during a shift discard","",""
+test-e2e: Shift Plans (report),"Absent & late timesheets > Roster starts in past, ends in future","Webapp change, tests currently being updated",""
+test-e2e: Reports (report),"payComparison.spec.ts:97: .filter({ hasText: '[MA000009] HIGA - Casual' }) resolved to 2 elements","Confirmed can be ignored, testing issue",""
+Zen E2E tests: Enterprise,"archiveUnarchivePayDetails.multiremotespec.js: ✖ Move 2nd location from default to 2nd pay detail","Flaky, fails with provision=true","https://deputy.atlassian.net/browse/QP-1092"
+test-e2e: Timesheets v2 Attestation (report),"attestation.spec.ts: known timezone issue","","https://deputy.atlassian.net/browse/TIME-4643"
+test-e2e: HR Onboarding (report),"Documents not showing in employee profile","Feature flag turned off in test vault","Slack thread, recommend turning FF on for nightly tests"
+Zen E2E tests: Business Insights (Others) Pack,"AssertionError: expected '167h' to equal '168h'","Known DST problem",""
+Zen E2E tests: Business Insights (Metrics) Pack,"expected '15h' to equal '18h'","Known DST problem","https://deputy.atlassian.net/browse/SMART-630"
+test-e2e: Fair Workweek NYC,"Error in publish wizard","Test needs update",""
+Balance API Tests: Supervise,"Pending timesheets cannot be deleted via resources API, error message: Failed asserting that 401 matches expected 200","","https://deputy.atlassian.net/browse/TIME-3386"
+Zen E2E tests: Enterprise,"X button not displayed anymore","","https://deputy.atlassian.net/browse/QP-1035"
+Zen E2E tests: Schedule Vue3 Pack 1,"expected '0 require confirmation' to equal '1 require confirmation'","Known issue caused by FWW feature flag","https://deputy.atlassian.net/browse/CORE-3257"
+Zen E2E tests: Business Insights (Others) Pack,"statsPanel tests failed","Caused by DST change",""
+test-api: Balance API Tests: Other,"Then the response values should be correct","","https://deputy.atlassian.net/browse/QP-1040"
+test-web: Fixed tasks,"Blank page in BI when all locations selected","","https://deputy.atlassian.net/browse/SMART-1844"
+Zen E2E tests: Enterprise,"Verify custom fields sort order in view mode of personal tab","","https://deputy.atlassian.net/browse/QP-1053"
+Balance API Tests: Supervise,"New field 'ExternalId' appearing in timesheet responses","","https://deputy.atlassian.net/browse/QP-1063"
+test-e2e: CSV Bulk,"Timesheet import succeeds, but incorrect break slots are created; Roster import fails","Test data error","https://deputy.atlassian.net/browse/INTS-2079"
+test-e2e: CSV Bulk Enterprise,"Import fails due to test data having seconds in time fields; Timesheet import succeeds, but incorrect break slots are created","New svc-integrations version needed","https://deputy.atlassian.net/browse/QP-1034"
+Balance API Tests: My,"Incorrect casing in API response (Shift -> shift)","Patch requested to update config","https://deputy.atlassian.net/browse/QP-1066"
+test-e2e: Timesheets v2,"Timesheet page fails to load for employee users","Known issue, feature not available",""
+test-e2e: Timesheets v2,"Detail view: 35-min break shows as 30 minutes","","https://deputy.atlassian.net/browse/TIME-3676"
+test-e2e: CSV Bulk,"20240419 - Import rosters fails; Break slots don't match given input","Known issue","https://deputy.atlassian.net/browse/INTS-2079"
+Zen E2E tests: Schedule Vue3 Pack 1,"Flaky viewSearch tests","Test issue","https://deputy.atlassian.net/browse/QP-1180"
+Zen E2E tests: People Vue Employment Pack P2,"Update due to beta policies with the same name","Test update required","https://deputy.atlassian.net/browse/QP-1201"

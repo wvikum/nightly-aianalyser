@@ -1,0 +1,352 @@
+Started by upstream project "Deployments/Deputy webapp test orchestrator
+" build number 20152
+
+originally caused by:
+ Started by remote host 10.33.146.230
+Lightweight checkout support not available, falling back to full checkout.
+Checking out git https://github.com/DeputyApp/test-e2e.git into /var/jenkins_home/workspace/TestEngineering/test-e2e/run-project@script/ad4556e3d6017ae0426fd0e26b2bdcc5ced2b1fbd0d4cee6ff6e93259f7d40a2 to read .jenkins/base.Jenkinsfile
+The recommended git tool is: git
+using credential dpty-jenkins-github-admin
+ > git rev-parse --resolve-git-dir /var/jenkins_home/workspace/TestEngineering/test-e2e/run-project@script/ad4556e3d6017ae0426fd0e26b2bdcc5ced2b1fbd0d4cee6ff6e93259f7d40a2/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/DeputyApp/test-e2e.git # timeout=10
+Fetching upstream changes from https://github.com/DeputyApp/test-e2e.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.39.2'
+using GIT_ASKPASS to set credentials GitHub Jenkins admin
+ > git fetch --tags --force --progress -- https://github.com/DeputyApp/test-e2e.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/refs/remotes/origin/main^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+JENKINS-19022: warning: possible memory leak due to Git plugin usage; see: https://plugins.jenkins.io/git/#remove-git-plugin-buildsbybranch-builddata-script
+Checking out Revision eb73425ea003ade206eca6a14d655b03c649d11c (refs/remotes/origin/main)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f eb73425ea003ade206eca6a14d655b03c649d11c # timeout=10
+Commit message: "Merge pull request #592 from DeputyApp/TIME-4775-other-locations-ui-pt2"
+ > git rev-list --no-walk eb73425ea003ade206eca6a14d655b03c649d11c # timeout=10
+The recommended git tool is: git
+using credential dpty-jenkins-github-admin
+ > git rev-parse HEAD^{commit} # timeout=10
+The recommended git tool is: git
+using credential dpty-jenkins-github-admin
+[GitCheckoutListener] Recording commits of 'git https://github.com/DeputyApp/test-e2e.git'
+[GitCheckoutListener] Found previous build 'TestEngineering/test-e2e/run-project #224391' that contains recorded Git commits
+[GitCheckoutListener] -> Starting recording of new commits since 'eb73425'
+[GitCheckoutListener] -> Multiple parent commits found - storing latest commit of local merge 'eb73425'
+[GitCheckoutListener] -> Using parent commit '7686a5e' of local merge as starting point
+[GitCheckoutListener] -> Storing target branch head 'aabdaed' (second parent of local merge)
+[GitCheckoutListener] -> Recorded 200 new commits
+[GitCheckoutListener] -> The latest commit 'eb73425ea003ade206eca6a14d655b03c649d11c' is a merge commit
+[GitCheckoutListener] -> Git commit decorator successfully obtained 'hudson.plugins.git.browser.GithubWeb@1928479' to render commit links
+Loading library dpty-jenkins-shared-library@main
+Examining DeputyApp/dpty-jenkins-shared-library
+Attempting to resolve main as a branch
+Resolved main as branch main at revision 2a0a9bc6989b1980c38ca1ee965a7d346d5b6117
+The recommended git tool is: NONE
+using credential dpty-jenkins-github-admin
+ > git rev-parse --resolve-git-dir /var/jenkins_home/workspace/TestEngineering/test-e2e/run-project@libs/96af09d50e693bc06875dda68b2912680dd2e47e8d4f87591f21caa4a13f960e@2/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/DeputyApp/dpty-jenkins-shared-library.git # timeout=10
+Pruning obsolete local branches
+Fetching without tags
+Fetching upstream changes from https://github.com/DeputyApp/dpty-jenkins-shared-library.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.39.2'
+using GIT_ASKPASS to set credentials GitHub Jenkins admin
+ > git fetch --no-tags --force --progress --prune -- https://github.com/DeputyApp/dpty-jenkins-shared-library.git +refs/heads/main:refs/remotes/origin/main # timeout=10
+Checking out Revision 2a0a9bc6989b1980c38ca1ee965a7d346d5b6117 (main)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 2a0a9bc6989b1980c38ca1ee965a7d346d5b6117 # timeout=10
+Commit message: "Merge pull request #98 from DeputyApp/tsv2-bulk-actions"
+ > git rev-list --no-walk 2a0a9bc6989b1980c38ca1ee965a7d346d5b6117 # timeout=10
+The recommended git tool is: NONE
+using credential dpty-jenkins-github-admin
+ > git rev-parse HEAD^{commit} # timeout=10
+The recommended git tool is: NONE
+using credential dpty-jenkins-github-admin
+[GitCheckoutListener] Recording commits of 'git https://github.com/DeputyApp/dpty-jenkins-shared-library.git'
+[GitCheckoutListener] Found previous build 'TestEngineering/test-e2e/run-project #224391' that contains recorded Git commits
+[GitCheckoutListener] -> Starting recording of new commits since '2a0a9bc'
+[GitCheckoutListener] -> Multiple parent commits found - storing latest commit of local merge '2a0a9bc'
+[GitCheckoutListener] -> Using parent commit '305a0b7' of local merge as starting point
+[GitCheckoutListener] -> Storing target branch head 'b6bd723' (second parent of local merge)
+[GitCheckoutListener] -> Recorded 200 new commits
+[GitCheckoutListener] -> The latest commit '2a0a9bc6989b1980c38ca1ee965a7d346d5b6117' is a merge commit
+[GitCheckoutListener] -> Git commit decorator successfully obtained 'hudson.plugins.git.browser.GithubWeb@2c83444e' to render commit links
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Still waiting to schedule task
+Waiting for next available executor on ‘builder-e2e-fargate-x86-64
+’
+Running on dpty-mgt-apse2-ecs-jenkins-agent-builder-e2e-fargate-x86-64-69nxx
+ in /home/jenkins/workspace/TestEngineering/test-e2e/run-project
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Checkout SCM)
+[Pipeline] checkout
+The recommended git tool is: git
+using credential dpty-jenkins-github-admin
+Cloning the remote Git repository
+Cloning repository https://github.com/DeputyApp/test-e2e.git
+ > git init /home/jenkins/workspace/TestEngineering/test-e2e/run-project # timeout=10
+Fetching upstream changes from https://github.com/DeputyApp/test-e2e.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.39.5'
+using GIT_ASKPASS to set credentials GitHub Jenkins admin
+ > git fetch --tags --force --progress -- https://github.com/DeputyApp/test-e2e.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/DeputyApp/test-e2e.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+Avoid second fetch
+JENKINS-19022: warning: possible memory leak due to Git plugin usage; see: https://plugins.jenkins.io/git/#remove-git-plugin-buildsbybranch-builddata-script
+Checking out Revision eb73425ea003ade206eca6a14d655b03c649d11c (refs/remotes/origin/main)
+Commit message: "Merge pull request #592 from DeputyApp/TIME-4775-other-locations-ui-pt2"
+[GitCheckoutListener] Skipping recording, since SCM 'git https://github.com/DeputyApp/test-e2e.git' already has been processed
+ > git rev-parse refs/remotes/origin/refs/remotes/origin/main^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f eb73425ea003ade206eca6a14d655b03c649d11c # timeout=10
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Build)
+[Pipeline] script
+[Pipeline] {
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Running Tests)
+[Pipeline] withCredentials
+Masking supported pattern matches of $ENV or $ENTERPRISE_AUTH or $JENKINS_GITHUB_SSH_KEY
+[Pipeline] {
+[Pipeline] script
+[Pipeline] {
+[Pipeline] sh
+Warning: A secret was passed to "sh" using Groovy String interpolation, which is insecure.
+		 Affected argument(s) used the following variable(s): [JENKINS_GITHUB_SSH_KEY]
+		 See https://jenkins.io/redirect/groovy-string-interpolation for details.
++ cp **** /root/.ssh/id_rsa
+[Pipeline] sh
++ npm ci
+npm warn deprecated glob@8.1.0: Glob versions prior to v9 are no longer supported
+npm warn deprecated sinon@9.2.4: 16.1.1
+
+> playwright-e2e@1.0.0 prepare
+> husky install; npm run check-update-graphql-schemas
+
+husky - Git hooks installed
+
+> playwright-e2e@1.0.0 check-update-graphql-schemas
+> if [ "$CI" = "true" ] || [ ! -d "../ops-infrastructure" ]; then echo 'Skipping update-graphql-schemas'; else npm run update-graphql-schemas; fi
+
+Skipping update-graphql-schemas
+
+added 477 packages, and audited 478 packages in 16s
+
+72 packages are looking for funding
+  run `npm fund` for details
+
+7 vulnerabilities (5 moderate, 2 high)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+Some issues need review, and may require choosing
+a different dependency.
+
+Run `npm audit` for details.
++ npx playwright install
+[Pipeline] sh
++ ENABLE_COREDNS=true COREDNS_ENABLE_ONCE=true COREDNS_WEBAPP_RESOLVE_ADDRESS=10.33.145.1 ROUTE53_VPC_ENDPOINT=10.10.64.2 AWS_REGION=ap-southeast-2 /code/run.sh
+[Pipeline] sleep
+Sleeping for 5 sec
+[Pipeline] sh
+Warning: A secret was passed to "sh" using Groovy String interpolation, which is insecure.
+		 Affected argument(s) used the following variable(s): [ENTERPRISE_AUTH]
+		 See https://jenkins.io/redirect/groovy-string-interpolation for details.
++ cp **** .env
++ chmod 764 .env
++ ENTERPRISE_AUTH=**** PROJECT=timesheets-v2-attestation TEST_SPEC_PATH= REGION=AU BROWSER=Desktop Chrome APP_NAME= APP_VERSION= PROVISION=true CI=true npm test
+
+> playwright-e2e@1.0.0 test
+> npx playwright test ${TEST_SPEC_PATH} `if [ ${PROJECT} ]; then echo --project=${PROJECT}; fi`
+
+Provision: Removing business from cache
+Provision: Removed from cache
+Provision: Setting business state as Used
+Provision: Set business state as: Used
+Provision: Using cached business {"token":"bb26370ebb082a8d925fb4e5f617182b","baseUri":"https://deputye2e1733820059443tsvue.au.deputy.com","uuid":"808f2c7e-e0ee-422c-8f47-101604bf11b8","businessId":"808f2c7e-e0ee-422c-8f47-101604bf11b8","onceToken":"1d301d11cf241ad177404876937a8f91","hostname":"deputye2e1733820059443tsvue.au.deputy.com","email":"qa+e2e@deputy.com","baseUrl":"https://deputye2e1733820059443tsvue.au.deputy.com"}
+Using cached business
+
+Running 10 tests using 1 worker
+
+Creating employees: loc manager attestation-ui, employee attestation-ui
+Fixtures: Using stored test credentials
+Fixtures: Accepting invite for qa+e2elocmanagerattestation-ui@deputy.com
+Fixtures: Using stored test credentials
+Fixtures: Accepting invite for qa+e2eemployeeattestation-ui@deputy.com
+Fixtures: Invite Accepted for qa+e2eemployeeattestation-ui@deputy.com
+Fixtures: Invite Accepted for qa+e2elocmanagerattestation-ui@deputy.com
+Enabling new timesheet view for default sysadmin
+Enabling new timesheet view for login users: qa+e2elocmanagerattestation-ui@deputy.com, qa+e2eemployeeattestation-ui@deputy.com
+Setting up locations & employees took 10 secs, 506 ms
+No timesheets to discard
+Operation 2q1jjfkav4lKfUhXRjqpvxwCnW0 (create-single-timesheet) took 1464 ms
+Operation 2q1jkRjToQnxd9PQlg5g64yIMvZ (create-single-timesheet) took 990 ms
+Operation 2q1jkiqvni7B3bgp8oiMb6sBugR (create-single-timesheet) took 1451 ms
+Operation 2q1jlKYFKFlXKmYUJU8Mr0JdkzF (create-single-timesheet) took 1422 ms
+Operation 2q1jllDWD8hRzqTBrK106iitrNC (discard-single) took 1425 ms
+Operation 2q1jlzq34FICogt2IqhuzxxXEx0 (create-single-timesheet) took 1931 ms
+Test annotation (Temporary expected behaviour): Overtime temporarily hidden from aggregates: https://github.com/DeputyApp/deputy-webapp/pull/19888
+Test annotation (bug): Can't validate comment count due to: https://deputy.atlassian.net/browse/TIME-3657
+Test annotation (bug): Issue flags appearing on time approved timesheets: https://deputy.atlassian.net/browse/TIME-3835
+  ✓  1 [timesheets-v2-attestation] › timesheets/v2/attestation.spec.ts:233:9 › Attestation › View & filter › Filter on disputed & verify timesheets are displayed correctly in list (36.8s)
+  ✓  2 [timesheets-v2-attestation] › timesheets/v2/attestation.spec.ts:287:11 › Attestation › View & filter › View different attestation states › Pending (3.5s)
+  ✓  3 [timesheets-v2-attestation] › timesheets/v2/attestation.spec.ts:292:11 › Attestation › View & filter › View different attestation states › Disputed (3.4s)
+  ✓  4 [timesheets-v2-attestation] › timesheets/v2/attestation.spec.ts:297:11 › Attestation › View & filter › View different attestation states › Confirmed (2.8s)
+  ✓  5 [timesheets-v2-attestation] › timesheets/v2/attestation.spec.ts:302:11 › Attestation › View & filter › View different attestation states › Resolved (2.8s)
+  ✓  6 [timesheets-v2-attestation] › timesheets/v2/attestation.spec.ts:307:11 › Attestation › View & filter › View different attestation states › Disputed & discarded (7.1s)
+[32minfo[39m:    Splitting 5 timesheets into groups of 1 to discard...
+[32minfo[39m:    Bulk Timesheet discard complete!
+Operation 2q1jy4le0nRLqFGepxxGR2s1142 (create-single-timesheet) took 976 ms
+Test annotation (workaround): Not using Escape to close detail view due to https://deputy.atlassian.net/browse/TIME-4592
+Test annotation (Temporary expected behaviour): Overtime temporarily hidden from aggregates: https://github.com/DeputyApp/deputy-webapp/pull/19888
+Test annotation (bug): Can't validate comment count due to: https://deputy.atlassian.net/browse/TIME-3657
+Test annotation (bug): Issue flags appearing on time approved timesheets: https://deputy.atlassian.net/browse/TIME-3835
+  ✓  7 [timesheets-v2-attestation] › timesheets/v2/attestation.spec.ts:321:9 › Attestation › Actions › Resolve disputed timesheet (1.4m)
+[32minfo[39m:    Splitting 1 timesheets into groups of 1 to discard...
+[32minfo[39m:    Bulk Timesheet discard complete!
+Operation 2q1k86E7342QiTsadxe7BOsb0Wp (create-single-timesheet) took 1814 ms
+  ✘  8 [timesheets-v2-attestation] › timesheets/v2/attestation.spec.ts:384:9 › Attestation › Actions › Approve & export disputed timesheet (31.0s)
+Creating employees: loc manager attestation-ui, employee attestation-ui
+Fixtures: Using stored test credentials
+Fixtures: Accepting invite for qa+e2elocmanagerattestation-ui@deputy.com
+Fixtures: Using stored test credentials
+Fixtures: Accepting invite for qa+e2eemployeeattestation-ui@deputy.com
+Fixtures: Invite Accepted for qa+e2elocmanagerattestation-ui@deputy.com
+Fixtures: Invite Accepted for qa+e2eemployeeattestation-ui@deputy.com
+Enabling new timesheet view for default sysadmin
+Enabling new timesheet view for login users: qa+e2elocmanagerattestation-ui@deputy.com, qa+e2eemployeeattestation-ui@deputy.com
+Setting up locations & employees took 20 secs, 718 ms
+[32minfo[39m:    Splitting 1 timesheets into groups of 1 to discard...
+[32minfo[39m:    Bulk Timesheet discard complete!
+Disabling new timesheet view for default sysadmin
+Disabling new timesheet view for login users: qa+e2elocmanagerattestation-ui@deputy.com, qa+e2eemployeeattestation-ui@deputy.com
+No timesheets to discard
+  ✓  9 [timesheets-v2-attestation] › timesheets/v2/attestation.spec.ts:433:11 › Attestation › Actions › Legacy timesheets UI › Discard & reinstate should not trigger attestation (28.4s)
+[32minfo[39m:    Splitting 1 timesheets into groups of 1 to discard...
+[32minfo[39m:    Bulk Timesheet discard complete!
+Enabling new timesheet view for default sysadmin
+Enabling new timesheet view for login users: qa+e2elocmanagerattestation-ui@deputy.com, qa+e2eemployeeattestation-ui@deputy.com
+  ✓  10 [timesheets-v2-attestation] › timesheets/v2/attestation.spec.ts:461:11 › Attestation › Actions › Legacy timesheets UI › Creating leave should not trigger attestation (32.5s)
+Deleting business . . .
+Deleted business . . .
+
+
+  1) [timesheets-v2-attestation] › timesheets/v2/attestation.spec.ts:384:9 › Attestation › Actions › Approve & export disputed timesheet
+
+    Error: Timeout 10000ms exceeded while waiting on the predicate
+
+       at ../apis/deputy/timesheets/timesheets.v2.api.ts:287
+
+      285 |     await expect(async () => {
+      286 |       res = await this.client.get(`api/management/v2/timesheets/${id}`);
+    > 287 |     }).toPass({ timeout: 10_000 }); // retry if timesheet not found (propagation delay) https://deputy.slack.com/archives/C03G2S7HBM0/p1724644760824659
+          |        ^
+      288 |
+      289 |     if (!res?.success) return Promise.reject(res);
+      290 |     return res.data;
+
+        at TimesheetsV2Api.getTimesheet (/home/jenkins/workspace/TestEngineering/test-e2e/run-project/apis/deputy/timesheets/timesheets.v2.api.ts:287:8)
+        at /home/jenkins/workspace/TestEngineering/test-e2e/run-project/tests/timesheets/v2/attestation.spec.ts:516:33
+        at createDisputedTimesheet (/home/jenkins/workspace/TestEngineering/test-e2e/run-project/tests/timesheets/v2/attestation.spec.ts:513:10)
+        at /home/jenkins/workspace/TestEngineering/test-e2e/run-project/tests/timesheets/v2/attestation.spec.ts:386:18
+
+    Error: Waiting for loading skeletons to go away: Target page, context or browser has been closed
+
+       at ../pages/deputy/timesheets/approveTimesheetsV2.page.ts:767
+
+      765 |     }
+      766 |
+    > 767 |     await expect(this.loadingSkeletons(), 'Waiting for loading skeletons to go away').toHaveCount(0, { timeout });
+          |                                                                                       ^
+      768 |
+      769 |     // we did this for a while because there was an invisible 'ghost skeleton' hanging around
+      770 |     // await expect(this.loadingSkeletons().nth(2)).toBeVisible({ visible: false });
+
+        at DeputyApproveTimesheetsV2Page.waitForLoadingSkeletons (/home/jenkins/workspace/TestEngineering/test-e2e/run-project/pages/deputy/timesheets/approveTimesheetsV2.page.ts:767:87)
+        at /home/jenkins/workspace/TestEngineering/test-e2e/run-project/utils/playwright/playwright-helpers.ts:21:16
+        at DeputyApproveTimesheetsV2Page.goto (/home/jenkins/workspace/TestEngineering/test-e2e/run-project/pages/deputy/timesheets/approveTimesheetsV2.page.ts:808:7)
+        at /home/jenkins/workspace/TestEngineering/test-e2e/run-project/utils/playwright/playwright-helpers.ts:21:16
+        at DeputyApproveTimesheetsV2Page.loginAndGoToTsaPage (/home/jenkins/workspace/TestEngineering/test-e2e/run-project/pages/deputy/timesheets/approveTimesheetsV2.page.ts:725:5)
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/attestation-Attestation-Ac-dc662-e-export-disputed-timesheet-timesheets-v2-attestation/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/attestation-Attestation-Ac-dc662-e-export-disputed-timesheet-timesheets-v2-attestation/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/attestation-Attestation-Ac-dc662-e-export-disputed-timesheet-timesheets-v2-attestation/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    [timesheets-v2-attestation] › timesheets/v2/attestation.spec.ts:384:9 › Attestation › Actions › Approve & export disputed timesheet
+  9 passed (5.6m)
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // withCredentials
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Declarative: Post Actions)
+[Pipeline] archiveArtifacts
+Archiving artifacts
+[Pipeline] junit
+Recording test results
+[Checks API] No suitable checks publisher found.
+[Pipeline] publishHTML
+[htmlpublisher] Archiving HTML reports...
+[htmlpublisher] Archiving at BUILD level /home/jenkins/workspace/TestEngineering/test-e2e/run-project/playwright-report to /var/jenkins_home/jobs/TestEngineering/jobs/test-e2e/jobs/run-project/builds/224392/htmlreports/Playwright_20Report
+[htmlpublisher] Copying recursive using current thread
+[Pipeline] script
+[Pipeline] {
+[Pipeline] fileExists
+[Pipeline] echo
+Results file exists
+[Pipeline] readFile
+[Pipeline] echo
+size: 1
+[Pipeline] echo
+Failed test suite: timesheets/v2/attestation.spec.ts
+[Pipeline] writeFile
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] archiveArtifacts
+Archiving artifacts
+[Pipeline] cleanWs
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Deferred wipeout is used...
+[WS-CLEANUP] done
+[Pipeline] script
+[Pipeline] {
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+ERROR: script returned exit code 1
+Finished: FAILURE
